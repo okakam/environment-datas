@@ -1,0 +1,25 @@
+{
+    "name": "Python Project",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "target": "develop"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": { 
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "Codium.codium"
+            ]       
+        }
+    },
+    "forwardPorts": [
+        8000
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root"
+}
