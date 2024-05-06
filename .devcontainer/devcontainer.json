@@ -1,9 +1,8 @@
 {
     "name": "Python Project",
-    "build": {
-        "dockerfile": "../Dockerfile",
-        "target": "develop"
-    },
+    "dockerComposeFile": "../compose.yml",
+    "service": "web-api",
+    "workspaceFolder": "/usr/local/environment-data",
     "customizations": {
         "vscode": {
             "settings": { 
@@ -20,6 +19,5 @@
     "forwardPorts": [
         8000
     ],
-    "postCreateCommand": "pip install -r requirements.txt",
     "remoteUser": "root"
 }

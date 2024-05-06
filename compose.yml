@@ -1,6 +1,13 @@
 version: '3.8'
+
 services:
-  python:
-    build: .
+  web-api:
+    build:
+      context: .
+      target: develop
+    container_name: web-api
+    # ports:
+    #   - 8000:8000
     volumes:
       - .:/usr/local/environment-data
+    tty: true
